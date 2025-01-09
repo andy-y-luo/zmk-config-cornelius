@@ -16,6 +16,16 @@
     quick-release;
 };
 
+lt_rpi: layer_tap_require_prior_idle {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+    bindings = <&kp>, <&kp>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -30,7 +40,7 @@
    &kp TAB      &kp Q   &kp W   &kp E   &kp R   &kp T           &kp Y   &kp U   &kp I     &kp O   &kp P    &kp DEL
    &sk LALT     &kp A   &kp S   &kp D   &kp F   &kp G           &kp H   &kp J   &kp K     &kp L   &kp SQT  &kp RALT
    &sk LSHFT    &kp Z   &kp X   &kp C   &kp V   &kp B           &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &sl FUNC
-        &sk LCTRL       &mt LGUI RET    &lt LOWER TAB           &lt RAISE BSPC  &kp SPACE &sk RSHFT
+        &sk LCTRL       &mt LGUI RET    &lt LOWER TAB           &lt_rpi RAISE BSPC  &kp SPACE &sk RSHFT
                         >;
                 };
                 lower_layer {
@@ -43,7 +53,7 @@
    &kp TAB      &kp EXCL &kp AT    &kp HASH  &kp DLLR &kp PRCNT       &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp DEL
    &sk LALT     &kp N1   &kp N2    &kp N3    &kp N4   &kp N5          &kp N6    &kp N7   &kp N8    &kp N9   &kp N0   &kp RALT
    &sk LSHFT    &trans   &kp TILDE &kp GRAVE &kp LBKT &kp LBRC        &kp RBRC  &kp RBKT &trans    &trans   &trans   &sl FUNC
-                &sk LCTRL   &mt LGUI RET    &mo LOWER                 &lt RAISE BSPC  &kp SPACE &kp COLON
+                &sk LCTRL   &mt LGUI RET    &mo LOWER                 &lt_rpi RAISE BSPC  &kp SPACE &kp COLON
                         >;
                 };
 
