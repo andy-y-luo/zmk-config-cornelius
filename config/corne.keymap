@@ -12,6 +12,10 @@
 #define RAISE   2
 #define FUNC    3
 
+&sk {
+    quick-release;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -50,10 +54,10 @@
 // | SHFT |  <   |  >  | cpy | pst |  ;   |       | mply | mprv | mnxt | vold | volu | FUNC |
 //        | ESC  | ENT/GUI  |   TAB   |           | RAISE | SPCE | SHFT |
                         bindings = <
-   &kp TAB      &kp DEL  &none   &kp UNDER  &kp PLUS    &kp PG_UP       &none     &none      &none      &kp BSLH     &kp PIPE     &kp DEL
-   &sk LALT     &kp HOME &kp END &kp MINUS  &kp EQUAL   &kp PG_DN       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT    &kp K_APP    &kp RALT
-   &sk LSHFT    &kp LT   &kp GT  &kp K_COPY &kp K_PASTE &kp SEMI        &kp C_PP  &kp C_PREV &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &sl FUNC
-                &kp ESC   &mt LGUI RET    &kp TAB                       &mo RAISE  &kp SPACE &sk RSHFT
+   &kp TAB      &kp DEL  &none   &kp UNDER      &kp PLUS        &kp PG_UP       &none     &none      &none      &kp BSLH     &kp PIPE     &kp DEL
+   &sk LALT     &kp HOME &kp END &kp MINUS      &kp EQUAL       &kp PG_DN       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT    &kp K_APP    &kp RALT
+   &sk LSHFT    &kp LT   &kp GT  &kp C_AC_COPY  &kp C_AC_PASTE  &kp SEMI        &kp C_PP  &kp C_PREV &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &sl FUNC
+                                &kp ESC   &mt LGUI RET    &kp TAB               &mo RAISE  &kp SPACE &sk RSHFT
                         >;
                 };
 
