@@ -38,39 +38,39 @@
                 qwerty_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |       |  Y  |  U   |  I  |  O  |  P  | DEL  |
-// |  ALT |  A  |  S  |  D  |  F  |  G  |       |  H  |  J   |  K  |  L  |  '  | ALTG |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |       |  H  |  J   |  K  |  L  |  '  | ALTG |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |       |  N  |  M   |  ,  |  .  |  /  | FUNC |
-//       | CTRL | ENT/GUI  | TAB/LOWER  |       | BKSP/RAISE | SPCE | SHFT |
+//       |  ALT | ENT/GUI  | TAB/LOWER  |       | BKSP/RAISE | SPCE | SHFT |
                         bindings = <
    &kp TAB      &kp Q   &kp W   &kp E   &kp R   &kp T           &kp Y   &kp U   &kp I     &kp O   &kp P    &kp DEL
-   &sk LALT     &kp A   &kp S   &kp D   &kp F   &kp G           &kp H   &kp J   &kp K     &kp L   &kp SQT  &kp RALT
+   &sk LCTRL    &kp A   &kp S   &kp D   &kp F   &kp G           &kp H   &kp J   &kp K     &kp L   &kp SQT  &kp RALT
    &sk LSHFT    &kp Z   &kp X   &kp C   &kp V   &kp B           &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &sl FUNC
-        &sk LCTRL       &mt LGUI RET    &lt LOWER TAB           &lt_qt RAISE BSPC  &kp SPACE &sk RSHFT
+        &sk LALT        &mt LGUI RET    &lt LOWER TAB           &lt_qt RAISE BSPC  &kp SPACE &sk RSHFT
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &   |  *  |  (  |  )  | DEL  |
-// |  ALT |  1  |  2  |  3  |  4  |  5  |       |  6  |  7   |  8  |  9  |  0  | ALTG |
+// | CTRL |  1  |  2  |  3  |  4  |  5  |       |  6  |  7   |  8  |  9  |  0  | ALTG |
 // | SHFT |     |  ~  |  `  |  [  |  {  |       |  }  |  ]   |     |     |     | FUNC |
-//       | CTRL | ENT/GUI  |  LOWER     |       | BKSP/RAISE | SPCE |  :  |
+//       |  ALT | ENT/GUI  |  LOWER     |       | BKSP/RAISE | SPCE |  :  |
                         bindings = <
    &kp TAB      &kp EXCL &kp AT    &kp HASH  &kp DLLR &kp PRCNT       &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp DEL
-   &sk LALT     &kp N1   &kp N2    &kp N3    &kp N4   &kp N5          &kp N6    &kp N7   &kp N8    &kp N9   &kp N0   &kp RALT
+   &sk LCTRL    &kp N1   &kp N2    &kp N3    &kp N4   &kp N5          &kp N6    &kp N7   &kp N8    &kp N9   &kp N0   &kp RALT
    &sk LSHFT    &trans   &kp TILDE &kp GRAVE &kp LBKT &kp LBRC        &kp RBRC  &kp RBKT &trans    &trans   &trans   &sl FUNC
-                &sk LCTRL   &mt LGUI RET    &mo LOWER                 &lt_qt RAISE BSPC  &kp SPACE &kp COLON
+                &sk LALT    &mt LGUI RET    &mo LOWER                 &lt_qt RAISE BSPC  &kp SPACE &kp COLON
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB | DEL  | xxx |  _  |  +  | PgUp |       | xxx  | xxx  | xxx  |  \   |  |   | DEL  |
-// |  ALT | home | end |  -  |  =  | PgDn |       | left | down | up   | rght | APP  | ALTG |
+// | CTRL | home | end |  -  |  =  | PgDn |       | left | down | up   | rght | APP  | ALTG |
 // | SHFT |  <   |  >  | cpy | pst |  ;   |       | mply | mprv | mnxt | vold | volu | FUNC |
 //        | ESC  | ENT/GUI  |   TAB   |           | RAISE | SPCE | SHFT |
                         bindings = <
    &kp TAB      &kp DEL  &none   &kp UNDER      &kp PLUS        &kp PG_UP       &none     &none      &none      &kp BSLH     &kp PIPE     &kp DEL
-   &sk LALT     &kp HOME &kp END &kp MINUS      &kp EQUAL       &kp PG_DN       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT    &kp K_APP    &kp RALT
+   &sk LCTRL    &kp HOME &kp END &kp MINUS      &kp EQUAL       &kp PG_DN       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT    &kp K_APP    &kp RALT
    &sk LSHFT    &kp LT   &kp GT  &kp C_AC_COPY  &kp C_AC_PASTE  &kp SEMI        &kp C_PP  &kp C_PREV &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &sl FUNC
                                 &kp ESC   &mt LGUI RET    &kp TAB               &mo RAISE  &kp SPACE &sk RSHFT
                         >;
@@ -79,12 +79,12 @@
                 func_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB | F1   | F2  | F3  | F4  | F5  |       | F6    | F7  | F8  | F9  | F10 | DEL  |
-// |  ALT | F11  | F12 | xxx | xxx | xxx |       | BTCLR | xxx | xxx | xxx | xxx | ALTG |
+// | CTRL | F11  | F12 | xxx | xxx | xxx |       | BTCLR | xxx | xxx | xxx | xxx | ALTG |
 // | SHFT | CAPS | xxx | xxx | xxx | xxx |       |  BT1  | BT2 | BT3 | BT4 | BT5 | FUNC |
 //                     | xxx | xxx | xxx |       | xxx   | xxx | xxx |
                         bindings = <
    &kp TAB   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5      &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp DEL
-   &sk LALT  &kp F11  &kp F12  &none   &none   &none       &bt BT_CLR   &none        &none        &none        &none        &kp RALT
+   &sk LCTRL &kp F11  &kp F12  &none   &none   &none       &bt BT_CLR   &none        &none        &none        &none        &kp RALT
    &sk LSHFT &kp CAPS &none    &none   &none   &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &mo FUNC
                              &none    &none    &none       &none    &none    &none
                         >;
